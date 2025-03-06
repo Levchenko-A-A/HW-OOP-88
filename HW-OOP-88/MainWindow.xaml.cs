@@ -11,6 +11,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace HW_OOP_88;
 
@@ -25,7 +26,8 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
         db.Persons.Load();
-        
+        Person = db.Persons.First()!;
+
     }
 
     private void Button_Click(object sender, RoutedEventArgs e)
